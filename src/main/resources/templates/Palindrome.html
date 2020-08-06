@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/darkly/bootstrap.min.css" integrity="sha384-Bo21yfmmZuXwcN/9vKrA5jPUMhr7znVBBeLxT9MA4r2BchhusfJ6+n8TLGUcRAtL" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+
+<div class="jumbotron container text-center col-lg-5 col-lg-offset-5">
+
+    <h1 class="text-success">Your elements</h1>
+    <br>
+    <h4>This is a list of all your elements and an indication if its a palindrome or not.</h4>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Element</th>
+            <th scope="col">Palindrome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="element : ${elements}">
+            <td th:text="${element.getKey()}">What</td>
+            <td th:text="${element.getValue()}">Happened?</td> <br>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <form action="/" method="get">
+        <button type="submit" class="btn btn-success">Go back to start</button>
+    </form>
+
+</div>
+
+</body>
+</html>

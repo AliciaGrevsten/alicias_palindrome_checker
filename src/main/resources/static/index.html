@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/darkly/bootstrap.min.css" integrity="sha384-Bo21yfmmZuXwcN/9vKrA5jPUMhr7znVBBeLxT9MA4r2BchhusfJ6+n8TLGUcRAtL" crossorigin="anonymous">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alicia's Palindrome Checker</title>
+</head>
+<body>
+
+<div class="jumbotron container text-center col-lg-5 col-lg-offset-5">
+
+    <br>
+    <h1>Welcome to Alicia's Palindrome Checker!</h1>
+    <br>
+    <form action="/palindrome" method="get" onsubmit="return myFunction()">
+        <label class="col-form-label" for="userInput">Enter your values separated by a space: </label>
+        <input type="text" class="form-control" placeholder="Write something.." id="userInput" name="input">
+        <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+</div>
+
+<script>
+    function myFunction() {
+        var input = document.getElementById("userInput").value;
+        if (input.length < 1) {
+            return false;
+        }
+
+        submitOK = true;
+    }
+</script>
+
+</body>
+</html>
